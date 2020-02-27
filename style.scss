@@ -20,6 +20,19 @@ body {
     overflow-x: hidden;
     font-family: 'Futura-Medium';
 
+    .nav-active {
+        &::after {
+            content: '';
+            display: block;
+            height: 5px;
+            width: 7px;
+            background-color: $blue-link;
+            margin: 4px auto -13px;
+            padding-bottom: 0;
+            border-radius: 2.5px;
+        }
+    }
+
     .container-fluid {
         max-width: 1366px;
     }
@@ -32,6 +45,9 @@ body {
         font-family: 'Lato';
         font-weight: bold;
         padding-top: 20px;
+        font-size: 15px;
+        line-height: 17px;
+        letter-spacing: 0.2px;
     }
 }
 
@@ -96,14 +112,16 @@ body {
         }
 
         .btn-fill {
-            background: linear-gradient(182.69deg, #7CB3DB -21.55%, #467CB5 135.43%);
+            // background-image: linear-gradient(182.69deg, #7CB3DB -21.55%, #467CB5 135.43%);
+            background-image: linear-gradient(to left bottom, #7CB3DB, #467CB5);
+            background-size: 150%;
             border: none;
             color: $white !important;
-            transition: .3s;
+            transition: .5s;
+            position: relative;
 
             &:hover {
-                background-position: right center;
-                transform: translate(0px, -5px);
+                background-position: right;
             }
         }
 
@@ -111,6 +129,53 @@ body {
             background: transparent;
             border: 1px solid #467CB5;
             color: $blue-link !important;
+            transition: .5s;
+            position: relative;
+
+            &:hover {
+                color: $white !important;
+                border: 1px solid $white;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background: linear-gradient(182.69deg, #7CB3DB -21.55%, #467CB5 135.43%);
+                z-index: -1;
+                transform: scaleX(0);
+                transition: transform 0.5s;
+                transform-origin: left;
+            }
+
+            &:hover::before {
+                transform: scaleX(1);
+                transition: transform 0.5s;
+                transform-origin: right;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 100%;
+                background: linear-gradient(182.69deg, #7CB3DB -21.55%, #467CB5 135.43%);
+                z-index: -1;
+                transform: scaleX(0);
+                transition: transform 0.5s;
+                transform-origin: right;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+                transition: transform 0.5s;
+                transform-origin: left;
+            }
         }
     }
 
@@ -124,10 +189,14 @@ body {
 // Section 2
 
 .section2 {
-    margin-top: 160px;
+    margin-top: 60px;
     color: $black !important;
     position: relative;
     height: 1300px;
+
+    #services {
+        height: 100px;
+    }
 
     h2 {
         width: 423px;
@@ -294,13 +363,19 @@ body {
             }
 
             .create-btn {
-                background: linear-gradient(182.37deg, #7CB3DB -21.55%, #467CB5 135.43%);
+                background-image: linear-gradient(to left bottom, #7CB3DB, #467CB5);
+                background-size: 150%;
                 border-radius: 2px;
                 width: 200px;
                 height: 56px;
                 color: $white !important;
                 border: none;
-                padding-top: 16px;
+                padding-top: 18px;
+                transition: .5s;
+
+                &:hover {
+                    background-position: right;
+                }
             }
         }
     }
@@ -309,7 +384,11 @@ body {
 // Section 4
 
 .section4 {
-    margin-top: 182px;
+    margin-top: 82px;
+
+    #pricing {
+        height: 100px;
+    }
 
     h2 {
         font-size: 40px;
@@ -334,8 +413,8 @@ body {
             &:hover {
                 box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.1);
                 border: 1px solid #467CB5;
-                transform: translate(0px, -20px);
-                scale: 1.2;
+                transform: translate(0px, -20px) !important;
+                scale: 1.2 !important;
             }
 
             h2 {
@@ -447,7 +526,11 @@ body {
 // Section 6
 
 .section6 {
-    margin-top: 262px;
+    margin-top: 162px;
+
+    #features {
+        height: 100px;
+    }
 
     .row {
         .col-lg-6 {
@@ -477,17 +560,62 @@ body {
             }
 
             .live-demo-btn {
-                background-color: $white;
+                background: transparent;
                 border: 1px solid #467CB5;
-                box-shadow: inset 0px -2px 0px rgba(255, 255, 255, 0.18801);
-                border-radius: 2px;
+                color: $blue-link !important;
+                transition: .5s;
                 width: 176px;
                 height: 56px;
-                font-size: 14px;
-                line-height: 17px;
-                letter-spacing: 0.2px;
-                color: $blue-link !important;
+                border-radius: 2px;
+                position: relative;
+                padding-top: 18px;
+
+                &:hover {
+                    color: $white !important;
+                    border: 1px solid $white;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50%;
+                    height: 100%;
+                    background: linear-gradient(182.69deg, #7CB3DB -21.55%, #467CB5 135.43%);
+                    z-index: -1;
+                    transform: scaleX(0);
+                    transition: transform 0.5s;
+                    transform-origin: left;
+                }
+
+                &:hover::before {
+                    transform: scaleX(1);
+                    transition: transform 0.5s;
+                    transform-origin: right;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 50%;
+                    height: 100%;
+                    background: linear-gradient(182.69deg, #7CB3DB -21.55%, #467CB5 135.43%);
+                    z-index: -1;
+                    transform: scaleX(0);
+                    transition: transform 0.5s;
+                    transform-origin: right;
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                    transition: transform 0.5s;
+                    transform-origin: left;
+                }
             }
+
         }
     }
 
@@ -558,7 +686,7 @@ body {
         padding-top: 80px;
         margin-bottom: 56px;
 
-        h1 {
+        .number {
             font-size: 70px;
             line-height: 84px;
             letter-spacing: 1px;
@@ -585,7 +713,7 @@ body {
         .btn-live-demo-fill {
             width: 176px;
             height: 56px;
-            background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+            background: $white;
             border: none;
             box-sizing: border-box;
             box-shadow: inset 0px -2px 0px rgba(255, 255, 255, 0.18801);
@@ -595,19 +723,72 @@ body {
             letter-spacing: 0.2px;
             color: $blue-link !important;
             margin-right: 50px;
+            transition: .5s;
+
+            &:hover {
+                opacity: 0.95;
+            }
         }
 
         .btn-contact {
+            background-color: transparent;
+            border: 1px solid $white;
+            color: $white;
+            transition: .5s;
+            border-radius: 2px;
+            padding-top: 18px;
             width: 176px;
             height: 56px;
-            border: 1px solid #FFFFFF;
-            box-sizing: border-box;
-            box-shadow: inset 0px -2px 0px rgba(255, 255, 255, 0.18801);
-            border-radius: 2px;
-            font-size: 14px;
-            line-height: 17px;
-            letter-spacing: 0.2px;
-            color: $white !important;
+            position: relative;
+            transition: .5s;
+            z-index: 1;
+
+            &:hover {
+                color: $blue-link;
+                z-index: 1;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background-color: $white !important;
+                z-index: 1;
+                transform: scaleX(0);
+                transition: transform 0.5s;
+                transform-origin: left;
+            }
+
+            &:hover::before {
+                transform: scaleX(1);
+                transition: transform 0.5s;
+                transform-origin: right;
+                z-index: -1;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 100%;
+                background-color: $white !important;
+                z-index: 1;
+                transform: scaleX(0);
+                transition: transform 0.5s;
+                transform-origin: right;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+                transition: transform 0.5s;
+                transform-origin: left;
+                z-index: -1;
+            }
         }
     }
 
@@ -689,7 +870,7 @@ footer {
         }
 
         img {
-            display: inline-block;
+            // display: inline-block;
             float: right;
         }
     }
