@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="home">
 
 <head>
     <meta charset="UTF-8">
@@ -19,22 +19,24 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="./assets/pajaku-logo.svg" alt="navbar-logo.svg"
+            <a class="navbar-brand" href="#home"><img src="./assets/pajaku-logo.svg" alt="navbar-logo.svg"
                     data-aos="zoom-in"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-ic">
+                    <img src="./assets/navbar-toggler-icon.svg" alt="">
+                </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav nav-left mr-auto">
-                    <a class="nav-item nav-link ml-5" href="#services">Services</a>
-                    <a class="nav-item nav-link ml-5" href="#pricing">Pricing</a>
-                    <a class="nav-item nav-link ml-5" href="#features">Features</a>
+                    <a class="nav-item nav-link services-marker ml-5" href="#services">Services</a>
+                    <a class="nav-item nav-link pricing-marker ml-5" href="#pricing">Pricing</a>
+                    <a class="nav-item nav-link features-marker ml-5" href="#features">Features</a>
                 </div>
                 <div class="navbar-nav nav-right ml-auto">
-                    <a class="nav-item nav-link mr-4" href="#">1-855-777-7696</a>
-                    <a class="nav-item nav-link mr-4" href="#">Login</a>
-                    <a class="nav-item nav-link nav-start mr-4" href="#">Start Now</a>
+                    <a class="nav-link mr-4" href="#">1-855-777-7696</a>
+                    <a class="nav-link mr-4" href="#">Login</a>
+                    <a class="nav-link nav-start mr-4" href="#">Start Now</a>
                 </div>
             </div>
         </div>
@@ -52,7 +54,9 @@
                     owners.
                 </h2>
                 <div class="hero-button-wrapper">
-                    <a href="#" class="btn hero-btn btn-fill">Schedule Live Demo</a>
+                    <a href="#" class="btn hero-btn btn-fill">
+                        <p>Schedule Live Demo</p>
+                    </a>
                     <a href="#" class="btn hero-btn btn-outline">Watch Our Video</a>
                 </div>
             </div>
@@ -531,7 +535,7 @@
                     © 2020 Pajaku Limited. All rights reserved. “Pajaku” and “Akunsiku” are trademarks of Pajaku
                     Limited.
                 </p>
-                <a href="#"><img src="./assets/pajaku-logo.svg" alt="pajaku-logo"></a>
+                <a href="#home"><img src="./assets/pajaku-logo.svg" alt="pajaku-logo"></a>
             </div>
         </div>
     </footer>
@@ -570,6 +574,43 @@
     <!-- Count Number On Scroll -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./count.js"></script>
+    <!-- Nav Active on Section -->
+    <script>
+        $(document).ready(function () {
+            $(".nav-item").click(function () {
+                $(".nav-item").addClass(".nav-active");
+            });
+        });
+        // $(document).ready(function () {
+        //     var navLinks = $('.nav-link'),
+        //         navH = $('.navbar').height(),
+        //         section = $('section'),
+        //         documentEl = $(document);
+
+        //     documentEl.on('scroll', function () {
+        //         var currentScrollPos = documentEl.scrollTop();
+
+        //         section.each(function () {
+        //             var self = $(this);
+        //             if (self.offset().top < (currentScrollPos + navH) && (currentScrollPos +
+        //                     navH) <
+        //                 (self.offset().top + self.outerHeight())) {
+        //                 var targetClass = '.' + self.attr('class') + '-marker';
+        //                 navLinks.removeClass('.nav-active');
+        //                 $(targetClass).addClass('.nav-active');
+        //             }
+        //         });
+
+        //     });
+        // });
+        // -------
+        // $('.nav-link').on('click', function () {
+        //     var tujuan = $(this).attr('href');
+        //     var elemenTujuan = $(tujuan);
+
+        //     console.log(elemenTujuan.offset().top);
+        // });
+    </script>
 </body>
 
 </html>

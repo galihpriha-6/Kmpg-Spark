@@ -80,6 +80,10 @@ body {
             color: $blue-link !important;
         }
     }
+
+    .navbar-toggler {
+        border: none;
+    }
 }
 
 // Hero
@@ -112,63 +116,67 @@ body {
         }
 
         .btn-fill {
-            // background-image: linear-gradient(182.69deg, #7CB3DB -21.55%, #467CB5 135.43%);
-            background-image: linear-gradient(to left bottom, #7CB3DB, #467CB5);
-            background-size: 150%;
-            border: none;
             color: $white !important;
+            background: linear-gradient(to left bottom, #7CB3DB, #467CB5);
+            background-size: 150%;
             transition: .5s;
             position: relative;
+            border: 1px linear-gradient(to left bottom, #7CB3DB, #467CB5);
+            border-radius: 2px;
+
+            p {
+                z-index: 1;
+                margin-bottom: 0;
+            }
 
             &:hover {
-                background-position: right;
+                opacity: 0.9;
             }
+
+            // &::after {
+            //     content: '';
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background: $white;
+            //     z-index: 2;
+            //     transition: transform 0.5s;
+            //     transform-origin: right;
+            //     transform: scaleX(0);
+            // }
+
+            // &:hover::after {
+            //     transform: scaleX(1);
+            //     transition: transform 0.5s;
+            //     transform-origin: left;
+            // }
         }
 
         .btn-outline {
             background: transparent;
-            border: 1px solid #467CB5;
+            border: 1px solid $blue-link;
             color: $blue-link !important;
             transition: .5s;
             position: relative;
 
             &:hover {
                 color: $white !important;
-                border: 1px solid $white;
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 50%;
-                height: 100%;
-                background: linear-gradient(182.69deg, #7CB3DB -21.55%, #467CB5 135.43%);
-                z-index: -1;
-                transform: scaleX(0);
-                transition: transform 0.5s;
-                transform-origin: left;
-            }
-
-            &:hover::before {
-                transform: scaleX(1);
-                transition: transform 0.5s;
-                transform-origin: right;
             }
 
             &::after {
                 content: '';
                 position: absolute;
                 top: 0;
-                right: 0;
-                width: 50%;
+                left: 0;
+                width: 100%;
                 height: 100%;
-                background: linear-gradient(182.69deg, #7CB3DB -21.55%, #467CB5 135.43%);
+                background: $blue-link;
                 z-index: -1;
-                transform: scaleX(0);
                 transition: transform 0.5s;
                 transform-origin: right;
+                transform: scaleX(0);
             }
 
             &:hover::after {
@@ -183,6 +191,10 @@ body {
         max-width: 701px;
         height: 601px;
         margin-left: -110px;
+
+        img {
+            box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.0722939);
+        }
     }
 }
 
@@ -285,7 +297,7 @@ body {
         margin-top: 128px;
 
         .card {
-            width: 340px;
+            width: 100%;
             min-height: 180px;
 
             h1 {
@@ -563,7 +575,7 @@ body {
                 background: transparent;
                 border: 1px solid #467CB5;
                 color: $blue-link !important;
-                transition: .5s;
+                transition: .3s;
                 width: 176px;
                 height: 56px;
                 border-radius: 2px;
@@ -572,37 +584,16 @@ body {
 
                 &:hover {
                     color: $white !important;
-                    border: 1px solid $white;
-                }
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 50%;
-                    height: 100%;
-                    background: linear-gradient(182.69deg, #7CB3DB -21.55%, #467CB5 135.43%);
-                    z-index: -1;
-                    transform: scaleX(0);
-                    transition: transform 0.5s;
-                    transform-origin: left;
-                }
-
-                &:hover::before {
-                    transform: scaleX(1);
-                    transition: transform 0.5s;
-                    transform-origin: right;
                 }
 
                 &::after {
                     content: '';
                     position: absolute;
                     top: 0;
-                    right: 0;
-                    width: 50%;
+                    left: 0;
+                    width: 100%;
                     height: 100%;
-                    background: linear-gradient(182.69deg, #7CB3DB -21.55%, #467CB5 135.43%);
+                    background: $blue-link;
                     z-index: -1;
                     transform: scaleX(0);
                     transition: transform 0.5s;
@@ -666,6 +657,10 @@ body {
                 font-size: 16px;
                 line-height: 19px;
                 letter-spacing: 0.08px;
+
+                &:hover {
+                    opacity: 0.9;
+                }
             }
         }
     }
@@ -724,10 +719,31 @@ body {
             color: $blue-link !important;
             margin-right: 50px;
             transition: .5s;
+            position: relative;
 
             &:hover {
-                opacity: 0.95;
+                opacity: 0.9;
             }
+
+            // &::after {
+            //     content: '';
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: $blue-link !important;
+            //     z-index: 1;
+            //     transform: scaleX(0);
+            //     transition: transform 0.5s;
+            //     transform-origin: right;
+            // }
+
+            // &:hover::after {
+            //     transform: scaleX(1);
+            //     transition: transform 0.5s;
+            //     transform-origin: left;
+            // }
         }
 
         .btn-contact {
@@ -748,33 +764,12 @@ body {
                 z-index: 1;
             }
 
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 50%;
-                height: 100%;
-                background-color: $white !important;
-                z-index: 1;
-                transform: scaleX(0);
-                transition: transform 0.5s;
-                transform-origin: left;
-            }
-
-            &:hover::before {
-                transform: scaleX(1);
-                transition: transform 0.5s;
-                transform-origin: right;
-                z-index: -1;
-            }
-
             &::after {
                 content: '';
                 position: absolute;
                 top: 0;
-                right: 0;
-                width: 50%;
+                left: 0;
+                width: 100%;
                 height: 100%;
                 background-color: $white !important;
                 z-index: 1;
@@ -825,6 +820,10 @@ footer {
         margin-bottom: 20px;
         font-family: 'Open Sans', sans-serif;
         text-align: left;
+
+        &:hover {
+            color: $blue-text !important;
+        }
     }
 
     p {
@@ -872,6 +871,19 @@ footer {
         img {
             // display: inline-block;
             float: right;
+        }
+    }
+}
+
+// Responsive 
+
+// 1199px below
+
+@media (max-width: 1199px) {
+    .hero {
+        .hero-banner {
+            position: absolute;
+            right: -200px;
         }
     }
 }
