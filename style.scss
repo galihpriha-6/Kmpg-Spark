@@ -27,7 +27,9 @@ body {
             height: 5px;
             width: 7px;
             background-color: $blue-link;
-            margin: 4px auto -13px;
+            position: absolute;
+            top: 90%;
+            left: 50%;
             padding-bottom: 0;
             border-radius: 2.5px;
         }
@@ -75,6 +77,7 @@ body {
             font-size: 16px;
             transition: .3s;
             display: inline-flex;
+            position: relative;
 
             &:hover::after {
                 content: '';
@@ -82,7 +85,9 @@ body {
                 height: 5px;
                 width: 7px;
                 background-color: $blue-link;
-                margin: 4px auto -13px;
+                position: absolute;
+                top: 90%;
+                left: 50%;
                 padding-bottom: 0;
                 border-radius: 2.5px;
             }
@@ -193,7 +198,7 @@ body {
     margin-top: 60px;
     color: $black !important;
     position: relative;
-    height: 1300px;
+    min-height: 1300px;
 
     #services {
         height: 100px;
@@ -229,7 +234,8 @@ body {
             .services-card {
                 background-color: $white;
                 width: 508px;
-                max-height: 444px;
+                min-height: 357px;
+                max-height: 700px;
                 padding: 50px;
                 color: $black !important;
                 box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.0722939);
@@ -325,7 +331,7 @@ body {
     .form-wrapper {
         background: linear-gradient(180.73deg, #7CB3DB 1.71%, #467CB5 144.23%);
         width: 100%;
-        height: 454px;
+        min-height: 454px;
         margin-top: 66px;
         padding: 80px;
 
@@ -333,7 +339,7 @@ body {
             background-color: $white;
             padding: 60px;
             max-width: 1000px;
-            height: 300px;
+            min-height: 300px;
             margin: auto;
 
             h2 {
@@ -374,7 +380,6 @@ body {
                 border: none;
                 padding-top: 18px;
                 transition: .5s;
-                display: block;
 
                 &:hover {
                     background-position: right;
@@ -400,7 +405,8 @@ body {
     }
 
     .row {
-        margin-top: 101px;
+        padding-top: 101px;
+        padding-bottom: 113px;
 
         .card {
             background: #FFFFFF;
@@ -411,7 +417,6 @@ body {
             height: 850px;
             padding: 50px 40px;
             transition: .5s;
-            margin-bottom: 113px;
 
             &:hover {
                 box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.1);
@@ -471,17 +476,16 @@ body {
                 letter-spacing: 0.08px;
             }
         }
-
-        h2 {
-            font-size: 32px;
-            line-height: 38px;
-            letter-spacing: 0.16px;
-            max-width: 860px;
-            text-align: center;
-            margin: 0px auto;
-        }
     }
 
+    .section4-text-bottom {
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: 0.16px;
+        max-width: 860px;
+        text-align: center;
+        margin: 0px auto;
+    }
 }
 
 // Section 5
@@ -761,7 +765,7 @@ body {
     img {
         position: absolute;
         top: 0;
-        right: 0;
+        left: 700px;
         display: block;
     }
 }
@@ -771,42 +775,45 @@ body {
 footer {
     background-color: $white;
 
-    h3 {
-        font-size: 18px;
-        line-height: 22px;
-        letter-spacing: 0.09px;
-        color: $black !important;
-        margin-bottom: 20px;
-        text-align: left;
-        margin-top: 110px;
-    }
+    .col {
+        padding-top: 60px;
 
-    .footer-link {
-        font-size: 16px;
-        line-height: 28px;
-        letter-spacing: 0.08px;
-        color: $blue-link !important;
-        text-decoration: none;
-        display: block;
-        margin-bottom: 20px;
-        font-family: 'Open Sans', sans-serif;
-        text-align: left;
-
-        &:hover {
-            color: $blue-text !important;
+        h3 {
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.09px;
+            color: $black !important;
+            margin-bottom: 20px;
+            text-align: left;
         }
-    }
 
-    p {
-        font-size: 16px;
-        line-height: 28px;
-        letter-spacing: 0.08px;
-        font-family: 'Open Sans', sans-serif;
-        opacity: 0.6;
-        text-align: left;
-        margin-bottom: 0;
-        max-width: 100%;
-        margin-bottom: 20px;
+        .footer-link {
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 0.08px;
+            color: $blue-link !important;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+            font-family: 'Open Sans', sans-serif;
+            text-align: left;
+
+            &:hover {
+                color: $blue-text !important;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 0.08px;
+            font-family: 'Open Sans', sans-serif;
+            opacity: 0.6;
+            text-align: left;
+            margin-bottom: 0;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
     }
 
     .social-media {
@@ -826,22 +833,21 @@ footer {
         background-color: #F2F2F2;
         width: 100%;
         height: 136px;
-        justify-content: center;
         padding-top: 56px;
 
-        p {
-            font-size: 14px;
-            line-height: 24px;
-            font-family: 'Open Sans', sans-serif;
-            letter-spacing: 0.07px;
-            color: $black !important;
-            opacity: 0.6;
-            display: inline-block;
-        }
+        .container {
+            display: flex;
+            justify-content: space-between;
 
-        img {
-            // display: inline-block;
-            float: right;
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: 0.07px;
+                color: $black !important;
+                opacity: 0.6;
+                display: inline-block;
+            }
         }
     }
 }
@@ -880,7 +886,7 @@ footer {
 
     .section2 {
         margin-top: 100px;
-        height: 1500px;
+        min-height: 1500px;
 
         .section2-content-wrapper {
             .section2-card-wrapper {
@@ -918,8 +924,6 @@ footer {
 
 @media (max-width: 1020px) {
     .section2 {
-        margin-top: 100px;
-        height: 1500px;
 
         .section2-content-wrapper {
             .section2-card-wrapper {
@@ -930,6 +934,16 @@ footer {
                     }
                 }
             }
+        }
+    }
+}
+
+// 992 up
+
+@media (min-width: 992px) {
+    .section4 {
+        .pricing-card-wrapper {
+            display: none !important;
         }
     }
 }
@@ -1009,9 +1023,340 @@ footer {
                 .row {
                     .services-card {
                         width: 100%;
-                        min-height: 510px;
+                        min-height: 570px;
                     }
                 }
+            }
+        }
+    }
+
+    .section4 {
+        .pricing-card-wrapper {
+            display: flex !important;
+            justify-content: space-around;
+
+            span {
+                display: flex;
+                align-items: center;
+
+                .arrow-left,
+                .arrow-right {
+                    cursor: pointer;
+                    transition: .3s;
+                    width: 100px;
+                    height: 100px;
+                    transform: scale(1.4);
+
+                    &:hover {
+                        transform: scale(1.6);
+                    }
+                }
+            }
+
+            .pricing-card-slider {
+
+                .card {
+                    margin: 0px auto;
+
+                    h2 {
+                        span {
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section5 {
+        position: relative;
+
+        .accountant-1-abs {
+            position: absolute;
+            top: 0;
+            left: 700px;
+            width: 240px;
+            height: 300px;
+            display: block;
+        }
+    }
+
+    footer {
+        .footer-bottom {
+            .container {
+
+                p {
+                    font-size: 11px;
+                    line-height: 24px;
+                    font-family: 'Open Sans', sans-serif;
+                    letter-spacing: 0.07px;
+                    color: $black !important;
+                    opacity: 0.6;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+// 961px
+
+@media (max-width: 961px) {
+    .section3 {
+        .form-wrapper {
+            form {
+                input {
+                    width: 350px;
+                }
+
+                .create-btn {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// 900px 
+
+@media (max-width: 900px) {
+    .section2 {
+        min-height: 1700px;
+
+        .section2-content-wrapper {
+            .section2-card-wrapper {
+                .row {
+
+                    .services-1,
+                    .services-2,
+                    .services-3 {
+                        min-height: 600px;
+                    }
+
+                    .services-card {
+                        h2 {
+                            max-width: 240px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 800px 
+
+@media (max-width: 800px) {
+    .section2 {
+        min-height: 1800px;
+
+        .section2-content-wrapper {
+            .section2-card-wrapper {
+                .row {
+
+                    .services-1,
+                    .services-2,
+                    .services-3 {
+                        min-height: 700px;
+                    }
+
+                    .services-4 {
+                        min-height: 100%;
+                    }
+
+                    .services-2,
+                    .services-4 {
+                        margin-top: 40px;
+                    }
+
+                    .services-card {
+                        h2 {
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section5 {
+        .accountant-1-abs {
+            left: 80%;
+
+        }
+    }
+}
+
+// 767px below 
+
+@media (max-width: 767px) {
+    .section2 {
+        min-height: 2100px;
+
+        .section2-content-wrapper {
+            min-height: 600px;
+
+            img {
+                height: 600px;
+            }
+
+            .section2-card-wrapper {
+                padding: 0px 80px 60px;
+
+                .row {
+
+                    .services-2,
+                    .services-4 {
+                        margin-top: 0px;
+                    }
+
+                    .services-card {
+                        min-height: 350px;
+                        margin-bottom: 60px;
+
+                        h2 {
+                            max-width: 400px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section3 {
+        margin-top: 100px;
+
+        .row {
+            .card {
+                max-width: 340px;
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    .section4 {
+        .pricing-card-wrapper {
+            span {
+                width: 95px;
+            }
+
+            .row {
+                .card {
+                    h2 {
+                        margin: 0 auto 34px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section5 {
+
+        p {
+            max-width: 500px;
+        }
+
+        .accountant-1-abs {
+            left: 87%;
+        }
+    }
+}
+
+// 651px
+
+@media (max-width: 651px) {
+    .section2 {
+        min-height: 2300px;
+
+        .section2-content-wrapper {
+            .section2-card-wrapper {
+                .row {
+                    .services-card {
+                        h2 {
+                            max-width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section3 {
+        .form-wrapper {
+            form {
+                input {
+                    max-width: 280px;
+                }
+            }
+        }
+    }
+
+    .section5 {
+        .accountant-1-abs {
+            left: 90%;
+        }
+    }
+}
+
+// 630px
+
+@media (max-width: 630px) {
+    .section5 {
+        p {
+            max-width: 450px;
+        }
+    }
+}
+
+// 575px
+
+@media (max-width: 575px) {
+
+    .navbar {
+        .navbar-brand {
+            padding-left: 60px;
+        }
+
+        .navbar-toggler {
+            margin-right: 60px;
+        }
+    }
+
+    .hero {
+        .hero-banner {
+            display: none;
+        }
+
+        .hero-banner-sm {
+            width: 100%;
+            height: 100%;
+            transform: scale(1.1);
+        }
+
+        h2 {
+            width: 100%;
+        }
+
+        .hero-button-wrapper {
+            width: 100%;
+            flex-direction: column;
+
+            .hero-btn {
+                width: 100%;
+
+                .btn-fill {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    .section2 {
+        .section2-content-wrapper {
+            background-color: $white;
+
+            .section-banner {
+                display: none;
             }
         }
     }

@@ -10,6 +10,8 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="./assets/libraries/aos.css">
+    <!-- Glider CSS -->
+    <link rel="stylesheet" href="./assets/libraries/glider.min.css">
     <!-- Local CSS -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./style.scss">
@@ -30,9 +32,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <div class="nav-left mr-auto">
-                        <a class="nav-item nav-link services-marker ml-5" href="#services">Services</a>
-                        <a class="nav-item nav-link pricing-marker ml-5" href="#pricing">Pricing</a>
-                        <a class="nav-item nav-link features-marker ml-5" href="#features">Features</a>
+                        <a class="nav-item nav-link services-marker ml-4" href="#services">Services</a>
+                        <a class="nav-item nav-link pricing-marker ml-4" href="#pricing">Pricing</a>
+                        <a class="nav-item nav-link features-marker ml-4" href="#features">Features</a>
                     </div>
                     <div class="nav-right ml-auto">
                         <a class="nav-link mr-4" href="#">1-855-777-7696</a>
@@ -49,7 +51,11 @@
     <section class="hero" id="hero">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-6" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
+                <div class="col-12 d-block d-sm-none">
+                    <img src="./assets/hero-banner.png" class="hero-banner-sm" data-rjs="./assets/hero-banner@2x.png"
+                        alt="hero-banner">
+                </div>
+                <div class="col-12  col-md-6" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="600">
                     <h2>
                         All of your bookkeeping, online. Pajaku is the <span>online bookkeeping service</span> designed
@@ -192,7 +198,8 @@
                 </h2>
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="card border-0" data-aos="fade-right" data-aos-duration="600">
+                        <div class="card border-0" data-aos="fade-right" data-aos-duration="600"
+                            data-aos-anchor-placement="top-bottom">
                             <h1><span></span>1</h1>
                             <h2>Create Your Account</h2>
                             <p>
@@ -203,7 +210,8 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="card border-0" data-aos="fade-right" data-aos-duration="600" data-aos-delay="600">
+                        <div class="card border-0" data-aos="fade-right" data-aos-duration="600" data-aos-delay="600"
+                            data-aos-anchor-placement="top-bottom">
                             <h1><span></span>2</h1>
                             <h2>Plug In Your Bank</h2>
                             <p>
@@ -215,7 +223,8 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-4">
-                        <div class="card border-0" data-aos="fade-right" data-aos-duration="600" data-aos-delay="1200">
+                        <div class="card border-0" data-aos="fade-right" data-aos-duration="600" data-aos-delay="1200"
+                            data-aos-anchor-placement="top-bottom">
                             <h1><span></span>3</h1>
                             <h2>Go On Vacation</h2>
                             <p>
@@ -245,8 +254,8 @@
             <div id="pricing"></div>
             <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">Plans and
                 <span>Pricing</span></h2>
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
+            <div class="row d-none d-lg-flex">
+                <div class="col-lg-4 col-xl-4">
                     <div class="card" data-aos="zoom-in-up" data-aos-anchor-placement=" top-bottom">
                         <h2><span>Starter</span></h2>
                         <h2>$140/mo</h2>
@@ -283,7 +292,7 @@
                         <a href="#" class="btn btn-learn-more">Learn More</a>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4">
+                <div class="col-lg-4 col-xl-4">
                     <div class="card" data-aos="zoom-in-up" data-aos-anchor-placement=" top-bottom">
                         <h2><span>Essential</span></h2>
                         <h2>$180/mo</h2>
@@ -320,7 +329,7 @@
                         <a href="#" class="btn btn-learn-more">Learn More</a>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4">
+                <div class="col-lg-4 col-xl-4">
                     <div class="card" data-aos="zoom-in-up" data-aos-anchor-placement=" top-bottom">
                         <h2><span>Enterprise</span></h2>
                         <h2>$220/mo</h2>
@@ -358,9 +367,135 @@
                         <a href="#" class="btn btn-learn-more">Learn More</a>
                     </div>
                 </div>
-                <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">Pick the plan that
-                    works for you. <span>No contracts</span>. Cancel anytime.</h2>
             </div>
+            <div class="pricing-card-wrapper">
+                <span>
+                    <img src="./assets/arrow-left.svg" class="arrow-left" alt="arrow-left">
+                </span>
+                <div class="row pricing-card-slider">
+                    <div class="col-md-4">
+                        <div class="card" data-aos="zoom-in-up" data-aos-anchor-placement=" top-bottom">
+                            <h2><span>Starter</span></h2>
+                            <h2>$140/mo</h2>
+                            <p>Designed for companies on a tight budget but who want a professional to handle the books
+                                for
+                                them.
+                            </p>
+                            <hr>
+                            <ul>
+                                <li>
+                                    Unlimited Consulting
+                                </li>
+                                <li>
+                                    Dedicated Accounting Team
+                                </li>
+                                <li>
+                                    Monthly Bookkeeping
+                                </li>
+                                <li>
+                                    <strike>Business Tax Preparation with</strike>
+                                </li>
+                                <li>
+                                    <strike>Audit Support</strike>
+                                </li>
+                                <li>
+                                    <strike>Personal Tax Preparation</strike>
+                                </li>
+                                <li>
+                                    <strike>Annual Tax Planning</strike>
+                                </li>
+                                <li>
+                                    <strike>Access to SurePayroll®</strike>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" data-aos="zoom-in-up" data-aos-anchor-placement=" top-bottom">
+                            <h2><span>Essential</span></h2>
+                            <h2>$180/mo</h2>
+                            <p>Our Most Popular Plan ideal for growing companies who need additional services to cover
+                                tax
+                                preparation.
+                            </p>
+                            <hr>
+                            <ul>
+                                <li>
+                                    Unlimited Consulting
+                                </li>
+                                <li>
+                                    Dedicated Accounting Team
+                                </li>
+                                <li>
+                                    Monthly Bookkeeping
+                                </li>
+                                <li>
+                                    Business Tax Preparation with
+                                </li>
+                                <li>
+                                    Audit Support
+                                </li>
+                                <li>
+                                    Personal Tax Preparation
+                                </li>
+                                <li>
+                                    Annual Tax Planning
+                                </li>
+                                <li>
+                                    <strike>Access to SurePayroll®</strike>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" data-aos="zoom-in-up" data-aos-anchor-placement=" top-bottom">
+                            <h2><span>Enterprise</span></h2>
+                            <h2>$220/mo</h2>
+                            <p>This plan is our most comprehensive, giving you the professional collaboration you need
+                                to
+                                cover
+                                everything, including Access to SurePayroll®.
+                            </p>
+                            <hr>
+                            <ul>
+                                <li>
+                                    Unlimited Consulting
+                                </li>
+                                <li>
+                                    Dedicated Accounting Team
+                                </li>
+                                <li>
+                                    Monthly Bookkeeping
+                                </li>
+                                <li>
+                                    Business Tax Preparation with
+                                </li>
+                                <li>
+                                    Audit Support
+                                </li>
+                                <li>
+                                    Personal Tax Preparation
+                                </li>
+                                <li>
+                                    Annual Tax Planning
+                                </li>
+                                <li>
+                                    Access to SurePayroll®
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-learn-more">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <span>
+                    <img src="./assets/arrow-right.svg" class="arrow-right" alt="arrow-right">
+                </span>
+            </div>
+            <h2 class="section4-text-bottom" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                data-aos-duration="600">Pick the plan that
+                works for you. <span>No contracts</span>. Cancel anytime.</h2>
         </div>
     </section>
     <!-- Section 4 End -->
@@ -381,7 +516,7 @@
                         or message anytime, and from anywhere.
                     </p>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-none d-lg-block">
                     <div class="row no-gutters">
                         <div class="col-sm-6" data-aos="fade-up" data-aos-delay="600" data-aos-duration="600">
                             <img src="./assets/accountant-1.png" class="accountant-1"
@@ -394,7 +529,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row no-gutters accountant-2">
+            <div class="row no-gutters accountant-2 d-none d-lg-flex">
                 <div class="col-lg-6">
                     <div class="row no-gutters">
                         <div class="col-sm-6" data-aos="fade-up" data-aos-delay="600" data-aos-duration="600">
@@ -420,7 +555,35 @@
                     </div>
                 </div>
             </div>
+            <div class="row accountant-slider d-none">
+                <div class="col">
+                    <img src="./assets/accountant-1.png" class="accountant-img" data-rjs="./assets/accountant-1@2x.png"
+                        alt="accountant.png">
+                </div>
+                <div class="col">
+                    <img src="./assets/accountant-2.png" class="accountant-img" data-rjs="./assets/accountant-2@2x.png"
+                        alt="accountant.png">
+                </div>
+                <div class="col">
+                    <img src="./assets/accountant-3.png" class="accountant-img" data-rjs="./assets/accountant-3@2x.png"
+                        alt="accountant.png">
+                </div>
+                <div class="col">
+                    <img src="./assets/accountant-4.png" class="accountant-img" data-rjs="./assets/accountant-4@2x.png"
+                        alt="accountant.png">
+                </div>
+                <div class="col">
+                    <img src="./assets/accountant-5.png" class="accountant-img" data-rjs="./assets/accountant-5@2x.png"
+                        alt="accountant.png">
+                </div>
+                <div class="col">
+                    <img src="./assets/accountant-6.png" class="accountant-img" data-rjs="./assets/accountant-6@2x.png"
+                        alt="accountant.png">
+                </div>
+            </div>
         </div>
+        <img src="./assets/accountant-1.png" class="accountant-1-abs d-lg-none" data-rjs="./assets/accountant-1@2x.png"
+            alt="">
     </section>
     <!-- Section 5 End -->
 
@@ -444,42 +607,42 @@
                 </div>
             </div>
             <div class="row features-wrapper">
-                <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
+                <div class="col-12 col-sm-6 col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="600">
                     <div class="features">
                         <h2>Reconciliation</h2>
                         <p>Automatically update and categorize your transactions in real time.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
+                <div class="col-12 col-sm-6 col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="600" data-aos-delay="600">
                     <div class="features">
                         <h2>Reports</h2>
                         <p>See all your balances and transaction trends together.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
+                <div class="col-12 col-sm-6 col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="600" data-aos-delay="1200">
                     <div class="features">
                         <h2>Collaboration</h2>
                         <p>Share your account with an unlimited number of users.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
+                <div class="col-12 col-sm-6 col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="600">
                     <div class="features">
                         <h2>Bank Feeds</h2>
                         <p>Automatically update and categorize your transactions in real time.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
+                <div class="col-12 col-sm-6 col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="600" data-aos-delay="600">
                     <div class="features">
                         <h2>Invoicing</h2>
                         <p>Send an invoice and get paid today.</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
+                <div class="col-12 col-sm-6 col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="600" data-aos-delay="1200">
                     <div class="features features-more">
                         <h2><span>+12</span> <small>Features</small></h2>
@@ -511,9 +674,9 @@
                     </div>
                 </div>
             </div>
-            <img src="./assets/transactions-banner.png" data-rjs="./assets/transactions-banner@2x.png"
-                alt="transaction-banner">
         </div>
+        <img src="./assets/transactions-banner.png" data-rjs="./assets/transactions-banner@2x.png"
+            alt="transaction-banner">
     </section>
     <!-- Section 7 End -->
 
@@ -522,7 +685,7 @@
         <div class="container-fluid p-0">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col col-6 col-md-4 col-lg-3">
                         <h3>Quick Link</h3>
                         <a href="#" class="footer-link">
                             Pricing
@@ -531,7 +694,7 @@
                             Schedule Consultation
                         </a>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col col-6 col-md-4 col-lg-3">
                         <h3>Policies</h3>
                         <a href="#" class="footer-link">
                             Privacy Policy
@@ -540,13 +703,13 @@
                             Term of Services
                         </a>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col col-12 col-md-4 col-lg-3">
                         <h3>Blog</h3>
                         <a href="#" class="footer-link">
                             All Blog Posts
                         </a>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col col-12 col-lg-3">
                         <h3>Contact Us</h3>
                         <p>
                             Toll Free: 1-855-777-7696 <br>
@@ -654,6 +817,35 @@
 
         //     console.log(elemenTujuan.offset().top);
         // });
+    </script>
+    <!-- Glider JS -->
+    <script src="./assets/libraries/glider.min.js"></script>
+    <script>
+        new Glider(document.querySelector('.pricing-card-slider'), {
+            slidesToShow: 1,
+            draggable: false,
+            rewind: true,
+            arrows: {
+                prev: '.arrow-left',
+                next: '.arrow-right'
+            }
+        });
+    </script>
+    <script>
+        new Glider(document.querySelector('.accountant-slider'), {
+            slidesToShow: 2.5,
+            draggable: true,
+            rewind: true,
+            arrows: {
+                prev: '.arrow-left',
+                next: '.arrow-right'
+            }
+        });
+    </script>
+    <script>
+        $('.navbar-nav').on('click', function () {
+            $('.navbar-toggler').click(); //bootstrap 4.x
+        });
     </script>
 </body>
 
