@@ -55,7 +55,7 @@
                     <img src="./assets/hero-banner.png" class="hero-banner-sm" data-rjs="./assets/hero-banner@2x.png"
                         alt="hero-banner">
                 </div>
-                <div class="col-12  col-md-6" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
+                <div class="col-12 col-md-6 hero-left" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="600">
                     <h2>
                         All of your bookkeeping, online. Pajaku is the <span>online bookkeeping service</span> designed
@@ -64,7 +64,7 @@
                         owners.
                     </h2>
                     <div class="hero-button-wrapper">
-                        <a href="#" class="btn hero-btn btn-fill">
+                        <a href="#" class="btn hero-btn btn-fill mb-3 mb-sm-0">
                             <p>Schedule Live Demo</p>
                         </a>
                         <a href="#" class="btn hero-btn btn-outline">Watch Our Video</a>
@@ -89,7 +89,8 @@
                 <h2>Here is <span>our services</span> that will you get</h2>
             </div>
             <div class="section2-content-wrapper">
-                <img src="./assets/section2-banner.png" data-rjs="./assets/section2-banner@2x.png" alt="section-banner">
+                <img src="./assets/section2-banner.png" data-rjs="./assets/section2-banner@2x.png"
+                    class="section2-banner" alt="section2-banner">
                 <div class="section2-card-wrapper">
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
@@ -186,7 +187,7 @@
 
     <!-- Section 3 -->
     <section class="section3">
-        <div class="container-fluid p-0">
+        <div class="container-fluid p-sm-0">
             <div class="container">
                 <h2 data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom">
                     Bookkeeping is the least enjoyable
@@ -368,11 +369,11 @@
                     </div>
                 </div>
             </div>
-            <div class="pricing-card-wrapper">
+            <div class="pricing-card-wrapper d-block d-lg-none">
                 <span>
                     <img src="./assets/arrow-left.svg" class="arrow-left" alt="arrow-left">
                 </span>
-                <div class="row pricing-card-slider">
+                <div class="row pricing-card-slider d-flex d-lg-none">
                     <div class="col-md-4">
                         <div class="card" data-aos="zoom-in-up" data-aos-anchor-placement=" top-bottom">
                             <h2><span>Starter</span></h2>
@@ -502,8 +503,8 @@
 
     <!-- Section 5 -->
     <section class="section5">
-        <div class="container">
-            <div class="row">
+        <div class="container p-0">
+            <div class="row section5-text">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="600">
                     <h2>
                         Meet Your <span>Virtual Accountant</span>
@@ -555,7 +556,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row accountant-slider d-none">
+            <div class="row accountant-slider d-flex d-sm-none">
                 <div class="col">
                     <img src="./assets/accountant-1.png" class="accountant-img" data-rjs="./assets/accountant-1@2x.png"
                         alt="accountant.png">
@@ -656,7 +657,7 @@
 
     <!-- Section 7 -->
     <section class="section7">
-        <div class="container-fluid p-0">
+        <div class="container-fluid p-sm-0">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -668,7 +669,7 @@
                         </div>
                         <div class="subtitle-btn-wrapper">
                             <h2>Interisting work with us ?</h2>
-                            <a href="#" class="btn btn-live-demo-fill">Schedule Live Demo</a>
+                            <a href="#" class="btn btn-live-demo-fill mb-3 mb-sm-0">Schedule Live Demo</a>
                             <a href="#" class="btn btn-contact">Contact Us</a>
                         </div>
                     </div>
@@ -825,6 +826,7 @@
             slidesToShow: 1,
             draggable: false,
             rewind: true,
+            dots: false,
             arrows: {
                 prev: '.arrow-left',
                 next: '.arrow-right'
@@ -833,13 +835,10 @@
     </script>
     <script>
         new Glider(document.querySelector('.accountant-slider'), {
-            slidesToShow: 2.5,
+            slidesToShow: 1.6,
             draggable: true,
             rewind: true,
-            arrows: {
-                prev: '.arrow-left',
-                next: '.arrow-right'
-            }
+            dots: false
         });
     </script>
     <script>
